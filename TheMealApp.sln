@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meal.UI", "Meal.UI\Meal.UI.csproj", "{23E43101-3DD1-40A3-AD08-83F944247AF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23E43101-3DD1-40A3-AD08-83F944247AF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23E43101-3DD1-40A3-AD08-83F944247AF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23E43101-3DD1-40A3-AD08-83F944247AF9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{23E43101-3DD1-40A3-AD08-83F944247AF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23E43101-3DD1-40A3-AD08-83F944247AF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23E43101-3DD1-40A3-AD08-83F944247AF9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4998EED-9273-4170-899B-A4A4CB3C1990}
+	EndGlobalSection
+EndGlobal

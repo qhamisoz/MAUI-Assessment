@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Meal.UI.ViewModels"
+             xmlns:m="clr-namespace:Meal.UI.Models"
+             x:Class="Meal.UI.Views.RecipeSelection"
+             x:DataType="vm:MealSelectionViewModel"
+             Title="Recipe Selection">
+
+    <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshingCommand}">
+        <CollectionView ItemsSource="{Binding Recipes}" RemainingItemsThreshold="10">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="m:Recipe">
+                    <StackLayout>
+                        <Frame Padding="10" Margin="3" BackgroundColor="#EEEEEE">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Frame HeightRequest="100" WidthRequest="100" CornerRadius="100" HasShadow="False">
+                                    <Image Source="{Binding strMealThumb}"
+                                       Aspect="AspectFill"
+                                       HorizontalOptions="Fill"
+                                       VerticalOptions="Fill" />
+                                </Frame>
+                                <StackLayout Grid.Column="1" Margin="10,25,10,10">
+                                    <Label Text="{Binding strMeal}" FontSize="18" FontAttributes="Bold" />
+                                </StackLayout>
+                            </Grid>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MealSelectionViewModel}}, Path=NavigateToRecipeDetailsCommand}" CommandParameter="{Binding .}" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                        <!--<Button Text="Go Back" Command="{Binding GoBackMainCommand}" />-->
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>
+</ContentPage>
